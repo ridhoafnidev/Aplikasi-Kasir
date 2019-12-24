@@ -1,6 +1,6 @@
 ﻿namespace Aplikasi_Kasir
 {
-    partial class Form1
+    partial class Barang
     {
         /// <summary>
         /// Required designer variable.
@@ -38,7 +38,7 @@
             System.Windows.Forms.Label stok_barangLabel;
             System.Windows.Forms.Label keteranganLabel;
             System.Windows.Forms.Label kode_satuanLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Barang));
             this.db_penjualanDataSet = new Aplikasi_Kasir.db_penjualanDataSet();
             this.tb_barangBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tb_barangTableAdapter = new Aplikasi_Kasir.db_penjualanDataSetTableAdapters.tb_barangTableAdapter();
@@ -550,7 +550,7 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Info Harga";
             // 
-            // Form1
+            // Barang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -583,8 +583,8 @@
             this.Controls.Add(this.tb_barangBindingNavigator);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Barang";
+            this.Text = "Barang";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.db_penjualanDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_barangBindingSource)).EndInit();
