@@ -6,3 +6,19 @@ E:\ASP.NET\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.Properties.Resources.resource
 E:\ASP.NET\Aplikasi Kasir\obj\Debug\Aplikasi Kasir.csproj.GenerateResource.cache
 E:\ASP.NET\Aplikasi Kasir\obj\Debug\Aplikasi Kasir.exe
 E:\ASP.NET\Aplikasi Kasir\obj\Debug\Aplikasi Kasir.pdb
+E:\ali\Aplikasi Destop\bin\Debug\Aplikasi Kasir.exe.config
+E:\ali\Aplikasi Destop\obj\Debug\Aplikasi Kasir.exe
+E:\ali\Aplikasi Destop\obj\Debug\Aplikasi Kasir.pdb
+E:\ali\Aplikasi Destop\bin\Debug\Aplikasi Kasir.exe
+E:\ali\Aplikasi Destop\bin\Debug\Aplikasi Kasir.pdb
+E:\ali\Aplikasi Destop\obj\Debug\Aplikasi Kasir.csprojResolveAssemblyReference.cache
+E:\ali\Aplikasi Destop\obj\Debug\Aplikasi_Kasir.Properties.Resources.resources
+E:\ali\Aplikasi Destop\obj\Debug\Aplikasi Kasir.csproj.GenerateResource.Cache
+E:\ali\Aplikasi Destop\Aplikasi Kasir\bin\Debug\Aplikasi Kasir.exe.config
+E:\ali\Aplikasi Destop\Aplikasi Kasir\obj\Debug\Aplikasi Kasir.exe
+E:\ali\Aplikasi Destop\Aplikasi Kasir\obj\Debug\Aplikasi Kasir.pdb
+E:\ali\Aplikasi Destop\Aplikasi Kasir\bin\Debug\Aplikasi Kasir.exe
+E:\ali\Aplikasi Destop\Aplikasi Kasir\bin\Debug\Aplikasi Kasir.pdb
+E:\ali\Aplikasi Destop\Aplikasi Kasir\obj\Debug\Aplikasi Kasir.csprojResolveAssemblyReference.cache
+E:\ali\Aplikasi Destop\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.Properties.Resources.resources
+E:\ali\Aplikasi Destop\Aplikasi Kasir\obj\Debug\Aplikasi Kasir.csproj.GenerateResource.Cache
