@@ -81,6 +81,7 @@ namespace Aplikasi_Kasir
             ButtonSimpanJenis.Visible = false;
             ButtonDeleteJenis.Visible = false;
             BTN_EditJenis.Visible = false;
+            BTN_Ubah.Visible = false;
         }
         public void Tampil_true()
         {
@@ -98,7 +99,7 @@ namespace Aplikasi_Kasir
                 OleDbConnection con = new OleDbConnection();
                 con.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\ali\Aplikasi Destop\Aplikasi Kasir\bin\Debug\Database\db_penjualan.accdb";
                 con.Open();
-                string sql = "select * from tb_jenis";
+                string sql = "select kode_jenis as [KODE JENIS], nama_jenis as [NAMA JENIS] from tb_jenis";
 
                 OleDbDataAdapter ad = new OleDbDataAdapter(sql, con);
                 ad.SelectCommand.ExecuteNonQuery();
@@ -130,18 +131,38 @@ namespace Aplikasi_Kasir
 
         private void ButtonDeleteJenis_Click(object sender, EventArgs e)
         {
-            OleDbConnection con = new OleDbConnection();
-            con.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\ali\Aplikasi Destop\Aplikasi Kasir\bin\Debug\Database\db_penjualan.accdb";
-            con.Open();
-            string sql = "delete from tb_jenis where kode_jenis ='"+TB_kode.Text+"'";
+            if (TB_kode.Text == "")
+            {
+                MessageBox.Show("Data Belum Di Pilih","INFORMASI",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+            else
+            {
+                
+                DialogResult result = MessageBox.Show("Yakin Ingin Menghapus Data " + TB_jenis.Text, "Informasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    OleDbConnection con = new OleDbConnection();
+                    con.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\ali\Aplikasi Destop\Aplikasi Kasir\bin\Debug\Database\db_penjualan.accdb";
+                    con.Open();
+                    string sql = "delete from tb_jenis where kode_jenis ='" + TB_kode.Text + "'";
 
-            OleDbCommand cmd = new OleDbCommand(sql, con);
-            cmd.ExecuteNonQuery();
+                    OleDbCommand cmd = new OleDbCommand(sql, con);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
 
-            MessageBox.Show("Data Berhasil Di Hapus!!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            con.Close();
-
-            clear();
+                    clear();
+                    Tampil_semua();
+                    ButtonTambahJenis.Visible = true;
+                }
+                else
+                {
+                    MessageBox.Show("Data Gagal Dihapus","INFORMASI",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    ButtonTambahJenis.Visible = true;
+                    clear();
+                }
+                
+            }
+            
         }
 
         private void DGV_jenis_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -154,6 +175,10 @@ namespace Aplikasi_Kasir
             BTN_EditJenis.Visible = true;
             ButtonDeleteJenis.Visible = true;
 
+            TB_jenis.Enabled = false;
+            TB_kode.Enabled = false;
+
+
         }
 
         private void BTN_EditJenis_Click(object sender, EventArgs e)
@@ -164,8 +189,29 @@ namespace Aplikasi_Kasir
             }
             else
             {
+                TB_jenis.Enabled = true;
+                TB_kode.Enabled = false;
+                BTN_Ubah.Visible = true;
 
+                
             }
         }
+
+        private void BTN_Ubah_Click(object sender, EventArgs e)
+        {
+            OleDbConnection con = new OleDbConnection();
+            con.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\ali\Aplikasi Destop\Aplikasi Kasir\bin\Debug\Database\db_penjualan.accdb";
+            con.Open();
+            string sql = "update tb_jenis set nama_jenis='" + TB_jenis.Text + "' where kode_jenis='" + TB_kode.Text + "'";
+            OleDbCommand cmd = new OleDbCommand(sql, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            MessageBox.Show("Data Berhasil Di Ubah","INFORMASI", MessageBoxButtons.OK,MessageBoxIcon.Information);
+
+            Tampil_false();
+            ButtonTambahJenis.Visible = true;
+            clear();
+        }
+
     }
 }
