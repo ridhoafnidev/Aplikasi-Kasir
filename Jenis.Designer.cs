@@ -51,20 +51,18 @@
             this.tb_jenisBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.TB_kode = new System.Windows.Forms.TextBox();
             this.TB_jenis = new System.Windows.Forms.TextBox();
-            this.tb_jenisDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ButtonTambahJenis = new System.Windows.Forms.Button();
             this.ButtonSimpanJenis = new System.Windows.Forms.Button();
             this.ButtonDeleteJenis = new System.Windows.Forms.Button();
             this.BTN_EditJenis = new System.Windows.Forms.Button();
+            this.DGV_jenis = new System.Windows.Forms.DataGridView();
             kode_jenisLabel = new System.Windows.Forms.Label();
             nama_jenisLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.db_penjualanDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_jenisBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_jenisBindingNavigator)).BeginInit();
             this.tb_jenisBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tb_jenisDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_jenis)).BeginInit();
             this.SuspendLayout();
             // 
             // kode_jenisLabel
@@ -251,31 +249,6 @@
             this.TB_jenis.Size = new System.Drawing.Size(100, 20);
             this.TB_jenis.TabIndex = 4;
             // 
-            // tb_jenisDataGridView
-            // 
-            this.tb_jenisDataGridView.AutoGenerateColumns = false;
-            this.tb_jenisDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tb_jenisDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
-            this.tb_jenisDataGridView.DataSource = this.tb_jenisBindingSource;
-            this.tb_jenisDataGridView.Location = new System.Drawing.Point(62, 149);
-            this.tb_jenisDataGridView.Name = "tb_jenisDataGridView";
-            this.tb_jenisDataGridView.Size = new System.Drawing.Size(243, 178);
-            this.tb_jenisDataGridView.TabIndex = 5;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "kode_jenis";
-            this.dataGridViewTextBoxColumn1.HeaderText = "kode_jenis";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "nama_jenis";
-            this.dataGridViewTextBoxColumn2.HeaderText = "nama_jenis";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
             // ButtonTambahJenis
             // 
             this.ButtonTambahJenis.Location = new System.Drawing.Point(125, 108);
@@ -304,6 +277,7 @@
             this.ButtonDeleteJenis.TabIndex = 9;
             this.ButtonDeleteJenis.Text = "Delete";
             this.ButtonDeleteJenis.UseVisualStyleBackColor = true;
+            this.ButtonDeleteJenis.Click += new System.EventHandler(this.ButtonDeleteJenis_Click);
             // 
             // BTN_EditJenis
             // 
@@ -313,17 +287,27 @@
             this.BTN_EditJenis.TabIndex = 10;
             this.BTN_EditJenis.Text = "Edit";
             this.BTN_EditJenis.UseVisualStyleBackColor = true;
+            this.BTN_EditJenis.Click += new System.EventHandler(this.BTN_EditJenis_Click);
+            // 
+            // DGV_jenis
+            // 
+            this.DGV_jenis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_jenis.Location = new System.Drawing.Point(62, 168);
+            this.DGV_jenis.Name = "DGV_jenis";
+            this.DGV_jenis.Size = new System.Drawing.Size(240, 150);
+            this.DGV_jenis.TabIndex = 12;
+            this.DGV_jenis.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_jenis_CellMouseClick);
             // 
             // Jenis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(541, 339);
+            this.Controls.Add(this.DGV_jenis);
             this.Controls.Add(this.BTN_EditJenis);
             this.Controls.Add(this.ButtonDeleteJenis);
             this.Controls.Add(this.ButtonSimpanJenis);
             this.Controls.Add(this.ButtonTambahJenis);
-            this.Controls.Add(this.tb_jenisDataGridView);
             this.Controls.Add(kode_jenisLabel);
             this.Controls.Add(this.TB_kode);
             this.Controls.Add(nama_jenisLabel);
@@ -331,13 +315,14 @@
             this.Controls.Add(this.tb_jenisBindingNavigator);
             this.Name = "Jenis";
             this.Text = "Jenis";
+            this.Activated += new System.EventHandler(this.Jenis_Activated);
             this.Load += new System.EventHandler(this.Jenis_Load);
             ((System.ComponentModel.ISupportInitialize)(this.db_penjualanDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_jenisBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_jenisBindingNavigator)).EndInit();
             this.tb_jenisBindingNavigator.ResumeLayout(false);
             this.tb_jenisBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tb_jenisDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_jenis)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -364,12 +349,10 @@
         private System.Windows.Forms.ToolStripButton tb_jenisBindingNavigatorSaveItem;
         private System.Windows.Forms.TextBox TB_kode;
         private System.Windows.Forms.TextBox TB_jenis;
-        private System.Windows.Forms.DataGridView tb_jenisDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.Button ButtonTambahJenis;
         private System.Windows.Forms.Button ButtonSimpanJenis;
         private System.Windows.Forms.Button ButtonDeleteJenis;
         private System.Windows.Forms.Button BTN_EditJenis;
+        private System.Windows.Forms.DataGridView DGV_jenis;
     }
 }

@@ -7,15 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
+using System.Data.OleDb;
+
 
 namespace Aplikasi_Kasir
 {
     public partial class Jenis : Form
     {
+        
+
         public Jenis()
         {
             InitializeComponent();
-        }
+        } 
 
         private void tb_jenisBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
@@ -29,37 +34,138 @@ namespace Aplikasi_Kasir
         {
             // TODO: This line of code loads data into the 'db_penjualanDataSet.tb_jenis' table. You can move, or remove it, as needed.
         //this.tb_jenisTableAdapter.Fill(this.db_penjualanDataSet.tb_jenis);
-            TB_kode.Enabled = false;
-            TB_jenis.Enabled = false;
-            BTN_Visible();
+            
+            Tampil_false();
+            Tampil_semua();
+            
 
         }
 
-        
         private void ButtonTambahJenis_Click(object sender, EventArgs e)
+        {
+            Tampil_true();
+            ButtonTambahJenis.Visible = false;
+
+        }
+
+        private void ButtonSimpanJenis_Click(object sender, EventArgs e)
+        {
+            if (TB_kode.Text == "")
+            {
+                MessageBox.Show("Data Belum Di Input!!!","INFORMASI",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+            else
+            {
+                Tampil_false();
+                ButtonTambahJenis.Visible = true;
+
+                OleDbConnection con = new OleDbConnection();
+                con.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\ali\Aplikasi Destop\Aplikasi Kasir\bin\Debug\Database\db_penjualan.accdb";
+                con.Open();
+                string sql = "insert into tb_jenis values" + "('" + TB_kode.Text + "','" + TB_jenis.Text + "')";
+
+                OleDbCommand cmd = new OleDbCommand(sql, con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Data Berhasil Di Simpan", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                con.Close();
+
+                clear();
+
+            }
+
+        }
+        public void Tampil_false()
+        {
+            TB_kode.Enabled = false;
+            TB_jenis.Enabled = false;
+            ButtonSimpanJenis.Visible = false;
+            ButtonDeleteJenis.Visible = false;
+            BTN_EditJenis.Visible = false;
+        }
+        public void Tampil_true()
         {
             TB_kode.Enabled = true;
             TB_jenis.Enabled = true;
             ButtonSimpanJenis.Visible = true;
             ButtonDeleteJenis.Visible = true;
             BTN_EditJenis.Visible = true;
-            ButtonTambahJenis.Visible = false;
         }
 
-        private void ButtonSimpanJenis_Click(object sender, EventArgs e)
+        public void Tampil_semua()
         {
-            TB_kode.Enabled = false;
-            TB_jenis.Enabled = false;
-            ButtonTambahJenis.Visible = true;
-            ButtonSimpanJenis.Visible = false;
-            ButtonDeleteJenis.Visible = false;
-            BTN_EditJenis.Visible = false;
+            try
+            {
+                OleDbConnection con = new OleDbConnection();
+                con.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\ali\Aplikasi Destop\Aplikasi Kasir\bin\Debug\Database\db_penjualan.accdb";
+                con.Open();
+                string sql = "select * from tb_jenis";
+
+                OleDbDataAdapter ad = new OleDbDataAdapter(sql, con);
+                ad.SelectCommand.ExecuteNonQuery();
+
+
+                DataTable dt = new DataTable();
+                ad.Fill(dt);
+                DGV_jenis.DataSource = dt;
+
+
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error" + ex);
+            }
         }
-        public void BTN_Visible()
+
+        public void clear()
         {
+            TB_kode.Text = "";
+            TB_jenis.Text = "";
+        }
+
+        private void Jenis_Activated(object sender, EventArgs e)
+        {
+            Tampil_semua();
+        }
+
+        private void ButtonDeleteJenis_Click(object sender, EventArgs e)
+        {
+            OleDbConnection con = new OleDbConnection();
+            con.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\ali\Aplikasi Destop\Aplikasi Kasir\bin\Debug\Database\db_penjualan.accdb";
+            con.Open();
+            string sql = "delete from tb_jenis where kode_jenis ='"+TB_kode.Text+"'";
+
+            OleDbCommand cmd = new OleDbCommand(sql, con);
+            cmd.ExecuteNonQuery();
+
+            MessageBox.Show("Data Berhasil Di Hapus!!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            con.Close();
+
+            clear();
+        }
+
+        private void DGV_jenis_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataGridViewRow ambil = this.DGV_jenis.Rows[e.RowIndex];
+            TB_kode.Text = ambil.Cells[0].Value.ToString();
+            TB_jenis.Text = ambil.Cells[1].Value.ToString();
             ButtonSimpanJenis.Visible = false;
-            ButtonDeleteJenis.Visible = false;
-            BTN_EditJenis.Visible = false;
+            ButtonTambahJenis.Visible = false;
+            BTN_EditJenis.Visible = true;
+            ButtonDeleteJenis.Visible = true;
+
+        }
+
+        private void BTN_EditJenis_Click(object sender, EventArgs e)
+        {
+            if(TB_kode.Text == "")
+            {
+                MessageBox.Show("Data Belum Di Pilih","INFORMASI",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+            else
+            {
+
+            }
         }
     }
 }
