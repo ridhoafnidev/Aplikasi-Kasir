@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Aplikasi_Kasir
 {
-    public partial class Form1 : Form
+    public partial class Barang : Form
     {
-        public Form1()
+        public Barang()
         {
             InitializeComponent();
         }

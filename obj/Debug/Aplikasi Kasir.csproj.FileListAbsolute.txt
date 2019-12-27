@@ -23,3 +23,5 @@ E:\ali\Aplikasi Destop\Aplikasi Kasir\obj\Debug\Aplikasi Kasir.csprojResolveAsse
 E:\ali\Aplikasi Destop\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.Properties.Resources.resources
 E:\ali\Aplikasi Destop\Aplikasi Kasir\obj\Debug\Aplikasi Kasir.csproj.GenerateResource.Cache
 E:\ASP.NET\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.Form1.resources
+E:\ali\Aplikasi Destop\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.Barang.resources
+E:\ali\Aplikasi Destop\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.Jenis.resources
