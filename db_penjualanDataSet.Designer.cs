@@ -38,18 +38,6 @@ namespace Aplikasi_Kasir {
         
         private tb_satuanDataTable tabletb_satuan;
         
-        private global::System.Data.DataRelation relationtb_jenistb_barang;
-        
-        private global::System.Data.DataRelation relationtb_merktb_barang;
-        
-        private global::System.Data.DataRelation relationtb_satuantb_barang;
-        
-        private global::System.Data.DataRelation relationtb_barangtb_detail_penjualan;
-        
-        private global::System.Data.DataRelation relationtb_penjualantb_detail_penjualan;
-        
-        private global::System.Data.DataRelation relationtb_penggunatb_penjualan;
-        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -350,12 +338,6 @@ namespace Aplikasi_Kasir {
                     this.tabletb_satuan.InitVars();
                 }
             }
-            this.relationtb_jenistb_barang = this.Relations["tb_jenistb_barang"];
-            this.relationtb_merktb_barang = this.Relations["tb_merktb_barang"];
-            this.relationtb_satuantb_barang = this.Relations["tb_satuantb_barang"];
-            this.relationtb_barangtb_detail_penjualan = this.Relations["tb_barangtb_detail_penjualan"];
-            this.relationtb_penjualantb_detail_penjualan = this.Relations["tb_penjualantb_detail_penjualan"];
-            this.relationtb_penggunatb_penjualan = this.Relations["tb_penggunatb_penjualan"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -380,30 +362,6 @@ namespace Aplikasi_Kasir {
             base.Tables.Add(this.tabletb_penjualan);
             this.tabletb_satuan = new tb_satuanDataTable();
             base.Tables.Add(this.tabletb_satuan);
-            this.relationtb_jenistb_barang = new global::System.Data.DataRelation("tb_jenistb_barang", new global::System.Data.DataColumn[] {
-                        this.tabletb_jenis.kode_jenisColumn}, new global::System.Data.DataColumn[] {
-                        this.tabletb_barang.kode_jenisColumn}, false);
-            this.Relations.Add(this.relationtb_jenistb_barang);
-            this.relationtb_merktb_barang = new global::System.Data.DataRelation("tb_merktb_barang", new global::System.Data.DataColumn[] {
-                        this.tabletb_merk.kode_merkColumn}, new global::System.Data.DataColumn[] {
-                        this.tabletb_barang.kode_merkColumn}, false);
-            this.Relations.Add(this.relationtb_merktb_barang);
-            this.relationtb_satuantb_barang = new global::System.Data.DataRelation("tb_satuantb_barang", new global::System.Data.DataColumn[] {
-                        this.tabletb_satuan.kode_satuanColumn}, new global::System.Data.DataColumn[] {
-                        this.tabletb_barang.kode_satuanColumn}, false);
-            this.Relations.Add(this.relationtb_satuantb_barang);
-            this.relationtb_barangtb_detail_penjualan = new global::System.Data.DataRelation("tb_barangtb_detail_penjualan", new global::System.Data.DataColumn[] {
-                        this.tabletb_barang.kode_barangColumn}, new global::System.Data.DataColumn[] {
-                        this.tabletb_detail_penjualan.kode_barangColumn}, false);
-            this.Relations.Add(this.relationtb_barangtb_detail_penjualan);
-            this.relationtb_penjualantb_detail_penjualan = new global::System.Data.DataRelation("tb_penjualantb_detail_penjualan", new global::System.Data.DataColumn[] {
-                        this.tabletb_penjualan.no_notaColumn}, new global::System.Data.DataColumn[] {
-                        this.tabletb_detail_penjualan.no_notaColumn}, false);
-            this.Relations.Add(this.relationtb_penjualantb_detail_penjualan);
-            this.relationtb_penggunatb_penjualan = new global::System.Data.DataRelation("tb_penggunatb_penjualan", new global::System.Data.DataColumn[] {
-                        this.tabletb_pengguna.kode_penggunaColumn}, new global::System.Data.DataColumn[] {
-                        this.tabletb_penjualan.pengguna_idColumn}, false);
-            this.Relations.Add(this.relationtb_penggunatb_penjualan);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -691,27 +649,18 @@ namespace Aplikasi_Kasir {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_barangRow Addtb_barangRow(string kode_barang, tb_jenisRow parenttb_jenisRowBytb_jenistb_barang, string nama_barang, tb_merkRow parenttb_merkRowBytb_merktb_barang, string harga_jual, int harga_beli, int stok_barang, string keterangan, tb_satuanRow parenttb_satuanRowBytb_satuantb_barang) {
+            public tb_barangRow Addtb_barangRow(string kode_barang, string kode_jenis, string nama_barang, string kode_merk, string harga_jual, int harga_beli, int stok_barang, string keterangan, string kode_satuan) {
                 tb_barangRow rowtb_barangRow = ((tb_barangRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         kode_barang,
-                        null,
+                        kode_jenis,
                         nama_barang,
-                        null,
+                        kode_merk,
                         harga_jual,
                         harga_beli,
                         stok_barang,
                         keterangan,
-                        null};
-                if ((parenttb_jenisRowBytb_jenistb_barang != null)) {
-                    columnValuesArray[1] = parenttb_jenisRowBytb_jenistb_barang[0];
-                }
-                if ((parenttb_merkRowBytb_merktb_barang != null)) {
-                    columnValuesArray[3] = parenttb_merkRowBytb_merktb_barang[0];
-                }
-                if ((parenttb_satuanRowBytb_satuantb_barang != null)) {
-                    columnValuesArray[8] = parenttb_satuanRowBytb_satuantb_barang[0];
-                }
+                        kode_satuan};
                 rowtb_barangRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtb_barangRow);
                 return rowtb_barangRow;
@@ -1047,21 +996,15 @@ namespace Aplikasi_Kasir {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_detail_penjualanRow Addtb_detail_penjualanRow(tb_penjualanRow parenttb_penjualanRowBytb_penjualantb_detail_penjualan, tb_barangRow parenttb_barangRowBytb_barangtb_detail_penjualan, int harga_jual, string qty, string satuan, int total_bayar) {
+            public tb_detail_penjualanRow Addtb_detail_penjualanRow(string no_nota, string kode_barang, int harga_jual, string qty, string satuan, int total_bayar) {
                 tb_detail_penjualanRow rowtb_detail_penjualanRow = ((tb_detail_penjualanRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
-                        null,
+                        no_nota,
+                        kode_barang,
                         harga_jual,
                         qty,
                         satuan,
                         total_bayar};
-                if ((parenttb_penjualanRowBytb_penjualantb_detail_penjualan != null)) {
-                    columnValuesArray[0] = parenttb_penjualanRowBytb_penjualantb_detail_penjualan[0];
-                }
-                if ((parenttb_barangRowBytb_barangtb_detail_penjualan != null)) {
-                    columnValuesArray[1] = parenttb_barangRowBytb_barangtb_detail_penjualan[0];
-                }
                 rowtb_detail_penjualanRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtb_detail_penjualanRow);
                 return rowtb_detail_penjualanRow;
@@ -2191,16 +2134,13 @@ namespace Aplikasi_Kasir {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_penjualanRow Addtb_penjualanRow(string no_nota, System.DateTime tgl_nota, int total_bayar, tb_penggunaRow parenttb_penggunaRowBytb_penggunatb_penjualan) {
+            public tb_penjualanRow Addtb_penjualanRow(string no_nota, System.DateTime tgl_nota, int total_bayar, string pengguna_id) {
                 tb_penjualanRow rowtb_penjualanRow = ((tb_penjualanRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         no_nota,
                         tgl_nota,
                         total_bayar,
-                        null};
-                if ((parenttb_penggunaRowBytb_penggunatb_penjualan != null)) {
-                    columnValuesArray[3] = parenttb_penggunaRowBytb_penggunatb_penjualan[0];
-                }
+                        pengguna_id};
                 rowtb_penjualanRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtb_penjualanRow);
                 return rowtb_penjualanRow;
@@ -2808,39 +2748,6 @@ namespace Aplikasi_Kasir {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_jenisRow tb_jenisRow {
-                get {
-                    return ((tb_jenisRow)(this.GetParentRow(this.Table.ParentRelations["tb_jenistb_barang"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["tb_jenistb_barang"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_merkRow tb_merkRow {
-                get {
-                    return ((tb_merkRow)(this.GetParentRow(this.Table.ParentRelations["tb_merktb_barang"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["tb_merktb_barang"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_satuanRow tb_satuanRow {
-                get {
-                    return ((tb_satuanRow)(this.GetParentRow(this.Table.ParentRelations["tb_satuantb_barang"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["tb_satuantb_barang"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Iskode_jenisNull() {
                 return this.IsNull(this.tabletb_barang.kode_jenisColumn);
             }
@@ -2933,17 +2840,6 @@ namespace Aplikasi_Kasir {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setkode_satuanNull() {
                 this[this.tabletb_barang.kode_satuanColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_detail_penjualanRow[] Gettb_detail_penjualanRows() {
-                if ((this.Table.ChildRelations["tb_barangtb_detail_penjualan"] == null)) {
-                    return new tb_detail_penjualanRow[0];
-                }
-                else {
-                    return ((tb_detail_penjualanRow[])(base.GetChildRows(this.Table.ChildRelations["tb_barangtb_detail_penjualan"])));
-                }
             }
         }
         
@@ -3054,28 +2950,6 @@ namespace Aplikasi_Kasir {
                 }
                 set {
                     this[this.tabletb_detail_penjualan.total_bayarColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_barangRow tb_barangRow {
-                get {
-                    return ((tb_barangRow)(this.GetParentRow(this.Table.ParentRelations["tb_barangtb_detail_penjualan"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["tb_barangtb_detail_penjualan"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_penjualanRow tb_penjualanRow {
-                get {
-                    return ((tb_penjualanRow)(this.GetParentRow(this.Table.ParentRelations["tb_penjualantb_detail_penjualan"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["tb_penjualantb_detail_penjualan"]);
                 }
             }
             
@@ -3204,17 +3078,6 @@ namespace Aplikasi_Kasir {
             public void Setnama_jenisNull() {
                 this[this.tabletb_jenis.nama_jenisColumn] = global::System.Convert.DBNull;
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_barangRow[] Gettb_barangRows() {
-                if ((this.Table.ChildRelations["tb_jenistb_barang"] == null)) {
-                    return new tb_barangRow[0];
-                }
-                else {
-                    return ((tb_barangRow[])(base.GetChildRows(this.Table.ChildRelations["tb_jenistb_barang"])));
-                }
-            }
         }
         
         /// <summary>
@@ -3268,17 +3131,6 @@ namespace Aplikasi_Kasir {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setnama_merkNull() {
                 this[this.tabletb_merk.nama_merkColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_barangRow[] Gettb_barangRows() {
-                if ((this.Table.ChildRelations["tb_merktb_barang"] == null)) {
-                    return new tb_barangRow[0];
-                }
-                else {
-                    return ((tb_barangRow[])(base.GetChildRows(this.Table.ChildRelations["tb_merktb_barang"])));
-                }
             }
         }
         
@@ -3362,17 +3214,6 @@ namespace Aplikasi_Kasir {
             public void SetpasswordNull() {
                 this[this.tabletb_pengguna.passwordColumn] = global::System.Convert.DBNull;
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_penjualanRow[] Gettb_penjualanRows() {
-                if ((this.Table.ChildRelations["tb_penggunatb_penjualan"] == null)) {
-                    return new tb_penjualanRow[0];
-                }
-                else {
-                    return ((tb_penjualanRow[])(base.GetChildRows(this.Table.ChildRelations["tb_penggunatb_penjualan"])));
-                }
-            }
         }
         
         /// <summary>
@@ -3450,17 +3291,6 @@ namespace Aplikasi_Kasir {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_penggunaRow tb_penggunaRow {
-                get {
-                    return ((tb_penggunaRow)(this.GetParentRow(this.Table.ParentRelations["tb_penggunatb_penjualan"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["tb_penggunatb_penjualan"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Istgl_notaNull() {
                 return this.IsNull(this.tabletb_penjualan.tgl_notaColumn);
             }
@@ -3493,17 +3323,6 @@ namespace Aplikasi_Kasir {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setpengguna_idNull() {
                 this[this.tabletb_penjualan.pengguna_idColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_detail_penjualanRow[] Gettb_detail_penjualanRows() {
-                if ((this.Table.ChildRelations["tb_penjualantb_detail_penjualan"] == null)) {
-                    return new tb_detail_penjualanRow[0];
-                }
-                else {
-                    return ((tb_detail_penjualanRow[])(base.GetChildRows(this.Table.ChildRelations["tb_penjualantb_detail_penjualan"])));
-                }
             }
         }
         
@@ -3558,17 +3377,6 @@ namespace Aplikasi_Kasir {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setnama_satuanNull() {
                 this[this.tabletb_satuan.nama_satuanColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_barangRow[] Gettb_barangRows() {
-                if ((this.Table.ChildRelations["tb_satuantb_barang"] == null)) {
-                    return new tb_barangRow[0];
-                }
-                else {
-                    return ((tb_barangRow[])(base.GetChildRows(this.Table.ChildRelations["tb_satuantb_barang"])));
-                }
             }
         }
         
@@ -6769,6 +6577,24 @@ namespace Aplikasi_Kasir.db_penjualanDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateUpdatedRows(db_penjualanDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._tb_barangTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tb_barang.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tb_barangTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._tb_detail_penjualanTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tb_detail_penjualan.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tb_detail_penjualanTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._tb_jenisTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.tb_jenis.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -6796,24 +6622,6 @@ namespace Aplikasi_Kasir.db_penjualanDataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tb_satuanTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tb_satuan.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tb_satuanTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._tb_barangTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tb_barang.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tb_barangTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._tb_penjualanTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.tb_penjualan.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -6823,12 +6631,12 @@ namespace Aplikasi_Kasir.db_penjualanDataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tb_detail_penjualanTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tb_detail_penjualan.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tb_satuanTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tb_satuan.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tb_detail_penjualanTableAdapter.Update(updatedRows));
+                    result = (result + this._tb_satuanTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -6842,6 +6650,22 @@ namespace Aplikasi_Kasir.db_penjualanDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateInsertedRows(db_penjualanDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._tb_barangTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tb_barang.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tb_barangTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._tb_detail_penjualanTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tb_detail_penjualan.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tb_detail_penjualanTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._tb_jenisTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.tb_jenis.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -6866,22 +6690,6 @@ namespace Aplikasi_Kasir.db_penjualanDataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tb_satuanTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tb_satuan.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tb_satuanTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._tb_barangTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tb_barang.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tb_barangTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._tb_penjualanTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.tb_penjualan.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -6890,11 +6698,11 @@ namespace Aplikasi_Kasir.db_penjualanDataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tb_detail_penjualanTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tb_detail_penjualan.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tb_satuanTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tb_satuan.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tb_detail_penjualanTableAdapter.Update(addedRows));
+                    result = (result + this._tb_satuanTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -6908,11 +6716,11 @@ namespace Aplikasi_Kasir.db_penjualanDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateDeletedRows(db_penjualanDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._tb_detail_penjualanTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tb_detail_penjualan.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tb_satuanTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tb_satuan.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tb_detail_penjualanTableAdapter.Update(deletedRows));
+                    result = (result + this._tb_satuanTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -6921,22 +6729,6 @@ namespace Aplikasi_Kasir.db_penjualanDataSetTableAdapters {
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._tb_penjualanTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._tb_barangTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tb_barang.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tb_barangTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._tb_satuanTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tb_satuan.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tb_satuanTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -6961,6 +6753,22 @@ namespace Aplikasi_Kasir.db_penjualanDataSetTableAdapters {
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._tb_jenisTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._tb_detail_penjualanTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tb_detail_penjualan.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tb_detail_penjualanTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._tb_barangTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tb_barang.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tb_barangTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

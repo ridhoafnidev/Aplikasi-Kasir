@@ -34,3 +34,13 @@ F:\ali\Aplikasi Destop\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.Properties.Resour
 F:\ali\Aplikasi Destop\Aplikasi Kasir\obj\Debug\Aplikasi Kasir.csproj.GenerateResource.cache
 F:\ali\Aplikasi Destop\Aplikasi Kasir\obj\Debug\Aplikasi Kasir.exe
 F:\ali\Aplikasi Destop\Aplikasi Kasir\obj\Debug\Aplikasi Kasir.pdb
+E:\ASP.NET\Aplikasi-Kasir\bin\Debug\Aplikasi Kasir.exe.config
+E:\ASP.NET\Aplikasi-Kasir\bin\Debug\Aplikasi Kasir.exe
+E:\ASP.NET\Aplikasi-Kasir\bin\Debug\Aplikasi Kasir.pdb
+E:\ASP.NET\Aplikasi-Kasir\obj\Debug\Aplikasi Kasir.csprojAssemblyReference.cache
+E:\ASP.NET\Aplikasi-Kasir\obj\Debug\Aplikasi_Kasir.Barang.resources
+E:\ASP.NET\Aplikasi-Kasir\obj\Debug\Aplikasi_Kasir.Jenis.resources
+E:\ASP.NET\Aplikasi-Kasir\obj\Debug\Aplikasi_Kasir.Properties.Resources.resources
+E:\ASP.NET\Aplikasi-Kasir\obj\Debug\Aplikasi Kasir.csproj.GenerateResource.cache
+E:\ASP.NET\Aplikasi-Kasir\obj\Debug\Aplikasi Kasir.exe
+E:\ASP.NET\Aplikasi-Kasir\obj\Debug\Aplikasi Kasir.pdb

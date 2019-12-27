@@ -60,7 +60,7 @@ namespace Aplikasi_Kasir
                 ButtonTambahJenis.Visible = true;
 
                 OleDbConnection con = new OleDbConnection();
-                con.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=F:\ali\Aplikasi Destop\Aplikasi Kasir\bin\Debug\Database\db_penjualan.accdb";
+                con.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Database\db_penjualan.accdb";
                 con.Open();
                 string sql = "insert into tb_jenis values" + "('" + TB_kode.Text + "','" + TB_jenis.Text + "')";
 
@@ -97,7 +97,7 @@ namespace Aplikasi_Kasir
             try
             {
                 OleDbConnection con = new OleDbConnection();
-                con.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=F:\ali\Aplikasi Destop\Aplikasi Kasir\bin\Debug\Database\db_penjualan.accdb";
+                con.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Database\db_penjualan.accdb";
                 con.Open();
                 string sql = "select kode_jenis as [KODE JENIS], nama_jenis as [NAMA JENIS] from tb_jenis";
 
@@ -142,7 +142,7 @@ namespace Aplikasi_Kasir
                 if (result == DialogResult.Yes)
                 {
                     OleDbConnection con = new OleDbConnection();
-                    con.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=F:\ali\Aplikasi Destop\Aplikasi Kasir\bin\Debug\Database\db_penjualan.accdb";
+                    con.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Database\db_penjualan.accdb";
                     con.Open();
                     string sql = "delete from tb_jenis where kode_jenis ='" + TB_kode.Text + "'";
 
@@ -200,7 +200,7 @@ namespace Aplikasi_Kasir
         private void BTN_Ubah_Click(object sender, EventArgs e)
         {
             OleDbConnection con = new OleDbConnection();
-            con.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=F:\ali\Aplikasi Destop\Aplikasi Kasir\bin\Debug\Database\db_penjualan.accdb";
+            con.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Database\db_penjualan.accdb";
             con.Open();
             string sql = "update tb_jenis set nama_jenis='" + TB_jenis.Text + "' where kode_jenis='" + TB_kode.Text + "'";
             OleDbCommand cmd = new OleDbCommand(sql, con);

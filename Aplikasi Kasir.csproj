@@ -48,6 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="db_penjualanDataSet.cs">
+      <DependentUpon>db_penjualanDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="db_penjualanDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -88,7 +91,6 @@
     </None>
     <None Include="db_penjualanDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>db_penjualanDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <None Include="db_penjualanDataSet.xss">
