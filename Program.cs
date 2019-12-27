@@ -16,7 +16,7 @@ namespace Aplikasi_Kasir
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Jenis());
+            Application.Run(new Barang());
         }
     }
 }

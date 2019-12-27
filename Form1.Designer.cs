@@ -65,24 +65,13 @@
             this.stok_barangTextBox = new System.Windows.Forms.TextBox();
             this.keteranganTextBox = new System.Windows.Forms.TextBox();
             this.kode_satuanTextBox = new System.Windows.Forms.TextBox();
-            this.tb_barangDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ButtonTambahBarang = new System.Windows.Forms.Button();
             this.ButtonSimpanBarang = new System.Windows.Forms.Button();
             this.ButtonEditBarang = new System.Windows.Forms.Button();
             this.ButtonHapusBarang = new System.Windows.Forms.Button();
             this.ButtonCariButton = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tb_barangDataGridView = new System.Windows.Forms.DataGridView();
             kode_barangLabel = new System.Windows.Forms.Label();
             kode_jenisLabel = new System.Windows.Forms.Label();
             nama_barangLabel = new System.Windows.Forms.Label();
@@ -102,7 +91,7 @@
             // kode_barangLabel
             // 
             kode_barangLabel.AutoSize = true;
-            kode_barangLabel.Location = new System.Drawing.Point(40, 60);
+            kode_barangLabel.Location = new System.Drawing.Point(27, 60);
             kode_barangLabel.Name = "kode_barangLabel";
             kode_barangLabel.Size = new System.Drawing.Size(72, 13);
             kode_barangLabel.TabIndex = 1;
@@ -111,7 +100,7 @@
             // kode_jenisLabel
             // 
             kode_jenisLabel.AutoSize = true;
-            kode_jenisLabel.Location = new System.Drawing.Point(40, 86);
+            kode_jenisLabel.Location = new System.Drawing.Point(27, 86);
             kode_jenisLabel.Name = "kode_jenisLabel";
             kode_jenisLabel.Size = new System.Drawing.Size(62, 13);
             kode_jenisLabel.TabIndex = 3;
@@ -120,7 +109,7 @@
             // nama_barangLabel
             // 
             nama_barangLabel.AutoSize = true;
-            nama_barangLabel.Location = new System.Drawing.Point(40, 112);
+            nama_barangLabel.Location = new System.Drawing.Point(27, 112);
             nama_barangLabel.Name = "nama_barangLabel";
             nama_barangLabel.Size = new System.Drawing.Size(75, 13);
             nama_barangLabel.TabIndex = 5;
@@ -129,7 +118,7 @@
             // kode_merkLabel
             // 
             kode_merkLabel.AutoSize = true;
-            kode_merkLabel.Location = new System.Drawing.Point(40, 138);
+            kode_merkLabel.Location = new System.Drawing.Point(27, 138);
             kode_merkLabel.Name = "kode_merkLabel";
             kode_merkLabel.Size = new System.Drawing.Size(34, 13);
             kode_merkLabel.TabIndex = 7;
@@ -138,7 +127,7 @@
             // harga_jualLabel
             // 
             harga_jualLabel.AutoSize = true;
-            harga_jualLabel.Location = new System.Drawing.Point(303, 57);
+            harga_jualLabel.Location = new System.Drawing.Point(245, 57);
             harga_jualLabel.Name = "harga_jualLabel";
             harga_jualLabel.Size = new System.Drawing.Size(61, 13);
             harga_jualLabel.TabIndex = 9;
@@ -147,7 +136,7 @@
             // harga_beliLabel
             // 
             harga_beliLabel.AutoSize = true;
-            harga_beliLabel.Location = new System.Drawing.Point(303, 83);
+            harga_beliLabel.Location = new System.Drawing.Point(245, 83);
             harga_beliLabel.Name = "harga_beliLabel";
             harga_beliLabel.Size = new System.Drawing.Size(59, 13);
             harga_beliLabel.TabIndex = 11;
@@ -156,7 +145,7 @@
             // stok_barangLabel
             // 
             stok_barangLabel.AutoSize = true;
-            stok_barangLabel.Location = new System.Drawing.Point(303, 109);
+            stok_barangLabel.Location = new System.Drawing.Point(245, 109);
             stok_barangLabel.Name = "stok_barangLabel";
             stok_barangLabel.Size = new System.Drawing.Size(69, 13);
             stok_barangLabel.TabIndex = 13;
@@ -165,7 +154,7 @@
             // keteranganLabel
             // 
             keteranganLabel.AutoSize = true;
-            keteranganLabel.Location = new System.Drawing.Point(545, 54);
+            keteranganLabel.Location = new System.Drawing.Point(478, 54);
             keteranganLabel.Name = "keteranganLabel";
             keteranganLabel.Size = new System.Drawing.Size(65, 13);
             keteranganLabel.TabIndex = 15;
@@ -174,7 +163,7 @@
             // kode_satuanLabel
             // 
             kode_satuanLabel.AutoSize = true;
-            kode_satuanLabel.Location = new System.Drawing.Point(303, 137);
+            kode_satuanLabel.Location = new System.Drawing.Point(245, 137);
             kode_satuanLabel.Name = "kode_satuanLabel";
             kode_satuanLabel.Size = new System.Drawing.Size(72, 13);
             kode_satuanLabel.TabIndex = 17;
@@ -288,6 +277,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -328,12 +318,11 @@
             this.tb_barangBindingNavigatorSaveItem.Name = "tb_barangBindingNavigatorSaveItem";
             this.tb_barangBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.tb_barangBindingNavigatorSaveItem.Text = "Save Data";
-            this.tb_barangBindingNavigatorSaveItem.Click += new System.EventHandler(this.tb_barangBindingNavigatorSaveItem_Click_1);
             // 
             // kode_barangTextBox
             // 
             this.kode_barangTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tb_barangBindingSource, "kode_barang", true));
-            this.kode_barangTextBox.Location = new System.Drawing.Point(118, 57);
+            this.kode_barangTextBox.Location = new System.Drawing.Point(105, 57);
             this.kode_barangTextBox.Name = "kode_barangTextBox";
             this.kode_barangTextBox.Size = new System.Drawing.Size(126, 20);
             this.kode_barangTextBox.TabIndex = 2;
@@ -341,7 +330,7 @@
             // kode_jenisTextBox
             // 
             this.kode_jenisTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tb_barangBindingSource, "kode_jenis", true));
-            this.kode_jenisTextBox.Location = new System.Drawing.Point(118, 83);
+            this.kode_jenisTextBox.Location = new System.Drawing.Point(105, 83);
             this.kode_jenisTextBox.Name = "kode_jenisTextBox";
             this.kode_jenisTextBox.Size = new System.Drawing.Size(126, 20);
             this.kode_jenisTextBox.TabIndex = 4;
@@ -349,7 +338,7 @@
             // nama_barangTextBox
             // 
             this.nama_barangTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tb_barangBindingSource, "nama_barang", true));
-            this.nama_barangTextBox.Location = new System.Drawing.Point(118, 109);
+            this.nama_barangTextBox.Location = new System.Drawing.Point(105, 109);
             this.nama_barangTextBox.Name = "nama_barangTextBox";
             this.nama_barangTextBox.Size = new System.Drawing.Size(126, 20);
             this.nama_barangTextBox.TabIndex = 6;
@@ -357,7 +346,7 @@
             // kode_merkTextBox
             // 
             this.kode_merkTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tb_barangBindingSource, "kode_merk", true));
-            this.kode_merkTextBox.Location = new System.Drawing.Point(118, 135);
+            this.kode_merkTextBox.Location = new System.Drawing.Point(105, 135);
             this.kode_merkTextBox.Name = "kode_merkTextBox";
             this.kode_merkTextBox.Size = new System.Drawing.Size(126, 20);
             this.kode_merkTextBox.TabIndex = 8;
@@ -365,7 +354,7 @@
             // harga_jualTextBox
             // 
             this.harga_jualTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tb_barangBindingSource, "harga_jual", true));
-            this.harga_jualTextBox.Location = new System.Drawing.Point(381, 54);
+            this.harga_jualTextBox.Location = new System.Drawing.Point(323, 54);
             this.harga_jualTextBox.Name = "harga_jualTextBox";
             this.harga_jualTextBox.Size = new System.Drawing.Size(142, 20);
             this.harga_jualTextBox.TabIndex = 10;
@@ -373,7 +362,7 @@
             // harga_beliTextBox
             // 
             this.harga_beliTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tb_barangBindingSource, "harga_beli", true));
-            this.harga_beliTextBox.Location = new System.Drawing.Point(381, 80);
+            this.harga_beliTextBox.Location = new System.Drawing.Point(323, 80);
             this.harga_beliTextBox.Name = "harga_beliTextBox";
             this.harga_beliTextBox.Size = new System.Drawing.Size(142, 20);
             this.harga_beliTextBox.TabIndex = 12;
@@ -381,7 +370,7 @@
             // stok_barangTextBox
             // 
             this.stok_barangTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tb_barangBindingSource, "stok_barang", true));
-            this.stok_barangTextBox.Location = new System.Drawing.Point(381, 106);
+            this.stok_barangTextBox.Location = new System.Drawing.Point(323, 106);
             this.stok_barangTextBox.Name = "stok_barangTextBox";
             this.stok_barangTextBox.Size = new System.Drawing.Size(142, 20);
             this.stok_barangTextBox.TabIndex = 14;
@@ -389,7 +378,7 @@
             // keteranganTextBox
             // 
             this.keteranganTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tb_barangBindingSource, "keterangan", true));
-            this.keteranganTextBox.Location = new System.Drawing.Point(610, 51);
+            this.keteranganTextBox.Location = new System.Drawing.Point(546, 51);
             this.keteranganTextBox.Multiline = true;
             this.keteranganTextBox.Name = "keteranganTextBox";
             this.keteranganTextBox.Size = new System.Drawing.Size(181, 50);
@@ -398,115 +387,44 @@
             // kode_satuanTextBox
             // 
             this.kode_satuanTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tb_barangBindingSource, "kode_satuan", true));
-            this.kode_satuanTextBox.Location = new System.Drawing.Point(381, 134);
+            this.kode_satuanTextBox.Location = new System.Drawing.Point(323, 134);
             this.kode_satuanTextBox.Name = "kode_satuanTextBox";
             this.kode_satuanTextBox.Size = new System.Drawing.Size(142, 20);
             this.kode_satuanTextBox.TabIndex = 18;
             // 
-            // tb_barangDataGridView
-            // 
-            this.tb_barangDataGridView.AutoGenerateColumns = false;
-            this.tb_barangDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tb_barangDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9});
-            this.tb_barangDataGridView.DataSource = this.tb_barangBindingSource;
-            this.tb_barangDataGridView.Location = new System.Drawing.Point(27, 240);
-            this.tb_barangDataGridView.Name = "tb_barangDataGridView";
-            this.tb_barangDataGridView.Size = new System.Drawing.Size(776, 185);
-            this.tb_barangDataGridView.TabIndex = 19;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "kode_barang";
-            this.dataGridViewTextBoxColumn1.HeaderText = "kode_barang";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "kode_jenis";
-            this.dataGridViewTextBoxColumn2.HeaderText = "kode_jenis";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "nama_barang";
-            this.dataGridViewTextBoxColumn3.HeaderText = "nama_barang";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "kode_merk";
-            this.dataGridViewTextBoxColumn4.HeaderText = "kode_merk";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "harga_jual";
-            this.dataGridViewTextBoxColumn5.HeaderText = "harga_jual";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "harga_beli";
-            this.dataGridViewTextBoxColumn6.HeaderText = "harga_beli";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "stok_barang";
-            this.dataGridViewTextBoxColumn7.HeaderText = "stok_barang";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "keterangan";
-            this.dataGridViewTextBoxColumn8.HeaderText = "keterangan";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "kode_satuan";
-            this.dataGridViewTextBoxColumn9.HeaderText = "kode_satuan";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
             // ButtonTambahBarang
             // 
-            this.ButtonTambahBarang.Location = new System.Drawing.Point(27, 188);
+            this.ButtonTambahBarang.Location = new System.Drawing.Point(28, 188);
             this.ButtonTambahBarang.Name = "ButtonTambahBarang";
             this.ButtonTambahBarang.Size = new System.Drawing.Size(75, 23);
             this.ButtonTambahBarang.TabIndex = 20;
             this.ButtonTambahBarang.Text = "Tambah";
             this.ButtonTambahBarang.UseVisualStyleBackColor = true;
+            this.ButtonTambahBarang.Click += new System.EventHandler(this.ButtonTambahBarang_Click);
             // 
             // ButtonSimpanBarang
             // 
-            this.ButtonSimpanBarang.Location = new System.Drawing.Point(130, 188);
+            this.ButtonSimpanBarang.Location = new System.Drawing.Point(753, 49);
             this.ButtonSimpanBarang.Name = "ButtonSimpanBarang";
             this.ButtonSimpanBarang.Size = new System.Drawing.Size(75, 23);
             this.ButtonSimpanBarang.TabIndex = 21;
             this.ButtonSimpanBarang.Text = "Simpan";
             this.ButtonSimpanBarang.UseVisualStyleBackColor = true;
+            this.ButtonSimpanBarang.Click += new System.EventHandler(this.ButtonSimpanBarang_Click);
             // 
             // ButtonEditBarang
             // 
-            this.ButtonEditBarang.Location = new System.Drawing.Point(232, 188);
+            this.ButtonEditBarang.Location = new System.Drawing.Point(753, 81);
             this.ButtonEditBarang.Name = "ButtonEditBarang";
             this.ButtonEditBarang.Size = new System.Drawing.Size(75, 23);
             this.ButtonEditBarang.TabIndex = 22;
             this.ButtonEditBarang.Text = "Edit";
             this.ButtonEditBarang.UseVisualStyleBackColor = true;
+            this.ButtonEditBarang.Click += new System.EventHandler(this.ButtonEditBarang_Click);
             // 
             // ButtonHapusBarang
             // 
-            this.ButtonHapusBarang.Location = new System.Drawing.Point(332, 188);
+            this.ButtonHapusBarang.Location = new System.Drawing.Point(753, 110);
             this.ButtonHapusBarang.Name = "ButtonHapusBarang";
             this.ButtonHapusBarang.Size = new System.Drawing.Size(75, 23);
             this.ButtonHapusBarang.TabIndex = 23;
@@ -515,53 +433,42 @@
             // 
             // ButtonCariButton
             // 
-            this.ButtonCariButton.Location = new System.Drawing.Point(464, 187);
+            this.ButtonCariButton.Location = new System.Drawing.Point(486, 192);
             this.ButtonCariButton.Name = "ButtonCariButton";
             this.ButtonCariButton.Size = new System.Drawing.Size(87, 23);
             this.ButtonCariButton.TabIndex = 24;
             this.ButtonCariButton.Text = "Cari";
             this.ButtonCariButton.UseVisualStyleBackColor = true;
-            this.ButtonCariButton.Click += new System.EventHandler(this.button5_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(585, 186);
+            this.textBox1.Location = new System.Drawing.Point(585, 190);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(218, 25);
+            this.textBox1.Size = new System.Drawing.Size(243, 25);
             this.textBox1.TabIndex = 25;
             // 
-            // groupBox1
+            // tb_barangDataGridView
             // 
-            this.groupBox1.Location = new System.Drawing.Point(26, 32);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(238, 132);
-            this.groupBox1.TabIndex = 26;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Info Barang";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Location = new System.Drawing.Point(287, 32);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(516, 132);
-            this.groupBox2.TabIndex = 27;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Info Harga";
+            this.tb_barangDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tb_barangDataGridView.Location = new System.Drawing.Point(30, 227);
+            this.tb_barangDataGridView.Name = "tb_barangDataGridView";
+            this.tb_barangDataGridView.Size = new System.Drawing.Size(798, 150);
+            this.tb_barangDataGridView.TabIndex = 26;
+            this.tb_barangDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.tb_barangDataGridView_CellMouseClick);
             // 
             // Barang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(840, 569);
+            this.Controls.Add(this.tb_barangDataGridView);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.ButtonCariButton);
             this.Controls.Add(this.ButtonHapusBarang);
             this.Controls.Add(this.ButtonEditBarang);
             this.Controls.Add(this.ButtonSimpanBarang);
             this.Controls.Add(this.ButtonTambahBarang);
-            this.Controls.Add(this.tb_barangDataGridView);
             this.Controls.Add(kode_barangLabel);
             this.Controls.Add(this.kode_barangTextBox);
             this.Controls.Add(kode_jenisLabel);
@@ -581,8 +488,6 @@
             this.Controls.Add(kode_satuanLabel);
             this.Controls.Add(this.kode_satuanTextBox);
             this.Controls.Add(this.tb_barangBindingNavigator);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.groupBox2);
             this.Name = "Barang";
             this.Text = "Barang";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -625,24 +530,13 @@
         private System.Windows.Forms.TextBox stok_barangTextBox;
         private System.Windows.Forms.TextBox keteranganTextBox;
         private System.Windows.Forms.TextBox kode_satuanTextBox;
-        private System.Windows.Forms.DataGridView tb_barangDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.Button ButtonTambahBarang;
         private System.Windows.Forms.Button ButtonSimpanBarang;
         private System.Windows.Forms.Button ButtonEditBarang;
         private System.Windows.Forms.Button ButtonHapusBarang;
         private System.Windows.Forms.Button ButtonCariButton;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridView tb_barangDataGridView;
     }
 }
 

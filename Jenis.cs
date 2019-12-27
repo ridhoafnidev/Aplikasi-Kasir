@@ -45,7 +45,6 @@ namespace Aplikasi_Kasir
         {
             Tampil_true();
             ButtonTambahJenis.Visible = false;
-
         }
 
         private void ButtonSimpanJenis_Click(object sender, EventArgs e)
@@ -88,6 +87,7 @@ namespace Aplikasi_Kasir
             TB_kode.Enabled = true;
             TB_jenis.Enabled = true;
             ButtonSimpanJenis.Visible = true;
+
             ButtonDeleteJenis.Visible = true;
             BTN_EditJenis.Visible = true;
         }
@@ -170,7 +170,7 @@ namespace Aplikasi_Kasir
             DataGridViewRow ambil = this.DGV_jenis.Rows[e.RowIndex];
             TB_kode.Text = ambil.Cells[0].Value.ToString();
             TB_jenis.Text = ambil.Cells[1].Value.ToString();
-            ButtonSimpanJenis.Visible = false;
+            ButtonSimpanJenis.Visible = true;
             ButtonTambahJenis.Visible = false;
             BTN_EditJenis.Visible = true;
             ButtonDeleteJenis.Visible = true;
