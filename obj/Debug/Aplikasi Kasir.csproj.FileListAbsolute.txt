@@ -19,9 +19,18 @@ E:\ali\Aplikasi Destop\Aplikasi Kasir\obj\Debug\Aplikasi Kasir.exe
 E:\ali\Aplikasi Destop\Aplikasi Kasir\obj\Debug\Aplikasi Kasir.pdb
 E:\ali\Aplikasi Destop\Aplikasi Kasir\bin\Debug\Aplikasi Kasir.exe
 E:\ali\Aplikasi Destop\Aplikasi Kasir\bin\Debug\Aplikasi Kasir.pdb
-E:\ali\Aplikasi Destop\Aplikasi Kasir\obj\Debug\Aplikasi Kasir.csprojResolveAssemblyReference.cache
 E:\ali\Aplikasi Destop\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.Properties.Resources.resources
 E:\ali\Aplikasi Destop\Aplikasi Kasir\obj\Debug\Aplikasi Kasir.csproj.GenerateResource.Cache
 E:\ASP.NET\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.Form1.resources
 E:\ali\Aplikasi Destop\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.Barang.resources
 E:\ali\Aplikasi Destop\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.Jenis.resources
+F:\ali\Aplikasi Destop\Aplikasi Kasir\bin\Debug\Aplikasi Kasir.exe.config
+F:\ali\Aplikasi Destop\Aplikasi Kasir\bin\Debug\Aplikasi Kasir.exe
+F:\ali\Aplikasi Destop\Aplikasi Kasir\bin\Debug\Aplikasi Kasir.pdb
+F:\ali\Aplikasi Destop\Aplikasi Kasir\obj\Debug\Aplikasi Kasir.csprojAssemblyReference.cache
+F:\ali\Aplikasi Destop\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.Barang.resources
+F:\ali\Aplikasi Destop\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.Jenis.resources
+F:\ali\Aplikasi Destop\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.Properties.Resources.resources
+F:\ali\Aplikasi Destop\Aplikasi Kasir\obj\Debug\Aplikasi Kasir.csproj.GenerateResource.cache
+F:\ali\Aplikasi Destop\Aplikasi Kasir\obj\Debug\Aplikasi Kasir.exe
+F:\ali\Aplikasi Destop\Aplikasi Kasir\obj\Debug\Aplikasi Kasir.pdb

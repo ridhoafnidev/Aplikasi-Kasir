@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label kode_jenisLabel;
-            System.Windows.Forms.Label nama_jenisLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Jenis));
+            System.Windows.Forms.Label label1;
             this.db_penjualanDataSet = new Aplikasi_Kasir.db_penjualanDataSet();
             this.tb_jenisBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tb_jenisTableAdapter = new Aplikasi_Kasir.db_penjualanDataSetTableAdapters.tb_jenisTableAdapter();
@@ -51,39 +51,30 @@
             this.tb_jenisBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.TB_kode = new System.Windows.Forms.TextBox();
             this.TB_jenis = new System.Windows.Forms.TextBox();
-            this.tb_jenisDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ButtonTambahJenis = new System.Windows.Forms.Button();
             this.ButtonSimpanJenis = new System.Windows.Forms.Button();
             this.ButtonDeleteJenis = new System.Windows.Forms.Button();
             this.BTN_EditJenis = new System.Windows.Forms.Button();
+            this.DGV_jenis = new System.Windows.Forms.DataGridView();
+            this.BTN_Ubah = new System.Windows.Forms.Button();
             kode_jenisLabel = new System.Windows.Forms.Label();
-            nama_jenisLabel = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.db_penjualanDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_jenisBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_jenisBindingNavigator)).BeginInit();
             this.tb_jenisBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tb_jenisDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_jenis)).BeginInit();
             this.SuspendLayout();
             // 
             // kode_jenisLabel
             // 
             kode_jenisLabel.AutoSize = true;
-            kode_jenisLabel.Location = new System.Drawing.Point(59, 53);
+            kode_jenisLabel.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            kode_jenisLabel.Location = new System.Drawing.Point(18, 55);
             kode_jenisLabel.Name = "kode_jenisLabel";
-            kode_jenisLabel.Size = new System.Drawing.Size(58, 13);
+            kode_jenisLabel.Size = new System.Drawing.Size(101, 19);
             kode_jenisLabel.TabIndex = 1;
-            kode_jenisLabel.Text = "kode jenis:";
-            // 
-            // nama_jenisLabel
-            // 
-            nama_jenisLabel.AutoSize = true;
-            nama_jenisLabel.Location = new System.Drawing.Point(59, 79);
-            nama_jenisLabel.Name = "nama_jenisLabel";
-            nama_jenisLabel.Size = new System.Drawing.Size(60, 13);
-            nama_jenisLabel.TabIndex = 3;
-            nama_jenisLabel.Text = "nama jenis:";
+            kode_jenisLabel.Text = "Kode Jenis";
             // 
             // db_penjualanDataSet
             // 
@@ -137,7 +128,7 @@
             this.tb_jenisBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.tb_jenisBindingNavigator.Name = "tb_jenisBindingNavigator";
             this.tb_jenisBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.tb_jenisBindingNavigator.Size = new System.Drawing.Size(541, 25);
+            this.tb_jenisBindingNavigator.Size = new System.Drawing.Size(449, 25);
             this.tb_jenisBindingNavigator.TabIndex = 0;
             this.tb_jenisBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -238,49 +229,24 @@
             // TB_kode
             // 
             this.TB_kode.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tb_jenisBindingSource, "kode_jenis", true));
-            this.TB_kode.Location = new System.Drawing.Point(125, 50);
+            this.TB_kode.Location = new System.Drawing.Point(132, 56);
             this.TB_kode.Name = "TB_kode";
-            this.TB_kode.Size = new System.Drawing.Size(100, 20);
+            this.TB_kode.Size = new System.Drawing.Size(190, 20);
             this.TB_kode.TabIndex = 2;
             // 
             // TB_jenis
             // 
             this.TB_jenis.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tb_jenisBindingSource, "nama_jenis", true));
-            this.TB_jenis.Location = new System.Drawing.Point(125, 76);
+            this.TB_jenis.Location = new System.Drawing.Point(132, 87);
             this.TB_jenis.Name = "TB_jenis";
-            this.TB_jenis.Size = new System.Drawing.Size(100, 20);
+            this.TB_jenis.Size = new System.Drawing.Size(190, 20);
             this.TB_jenis.TabIndex = 4;
-            // 
-            // tb_jenisDataGridView
-            // 
-            this.tb_jenisDataGridView.AutoGenerateColumns = false;
-            this.tb_jenisDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tb_jenisDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
-            this.tb_jenisDataGridView.DataSource = this.tb_jenisBindingSource;
-            this.tb_jenisDataGridView.Location = new System.Drawing.Point(62, 149);
-            this.tb_jenisDataGridView.Name = "tb_jenisDataGridView";
-            this.tb_jenisDataGridView.Size = new System.Drawing.Size(243, 178);
-            this.tb_jenisDataGridView.TabIndex = 5;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "kode_jenis";
-            this.dataGridViewTextBoxColumn1.HeaderText = "kode_jenis";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "nama_jenis";
-            this.dataGridViewTextBoxColumn2.HeaderText = "nama_jenis";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // ButtonTambahJenis
             // 
-            this.ButtonTambahJenis.Location = new System.Drawing.Point(125, 108);
+            this.ButtonTambahJenis.Location = new System.Drawing.Point(132, 125);
             this.ButtonTambahJenis.Name = "ButtonTambahJenis";
-            this.ButtonTambahJenis.Size = new System.Drawing.Size(75, 23);
+            this.ButtonTambahJenis.Size = new System.Drawing.Size(190, 23);
             this.ButtonTambahJenis.TabIndex = 6;
             this.ButtonTambahJenis.Text = "Tambah";
             this.ButtonTambahJenis.UseVisualStyleBackColor = true;
@@ -288,9 +254,9 @@
             // 
             // ButtonSimpanJenis
             // 
-            this.ButtonSimpanJenis.Location = new System.Drawing.Point(231, 50);
+            this.ButtonSimpanJenis.Location = new System.Drawing.Point(345, 49);
             this.ButtonSimpanJenis.Name = "ButtonSimpanJenis";
-            this.ButtonSimpanJenis.Size = new System.Drawing.Size(75, 23);
+            this.ButtonSimpanJenis.Size = new System.Drawing.Size(75, 24);
             this.ButtonSimpanJenis.TabIndex = 7;
             this.ButtonSimpanJenis.Text = "Simpan";
             this.ButtonSimpanJenis.UseVisualStyleBackColor = true;
@@ -298,46 +264,82 @@
             // 
             // ButtonDeleteJenis
             // 
-            this.ButtonDeleteJenis.Location = new System.Drawing.Point(231, 79);
+            this.ButtonDeleteJenis.Location = new System.Drawing.Point(345, 78);
             this.ButtonDeleteJenis.Name = "ButtonDeleteJenis";
-            this.ButtonDeleteJenis.Size = new System.Drawing.Size(75, 23);
+            this.ButtonDeleteJenis.Size = new System.Drawing.Size(75, 24);
             this.ButtonDeleteJenis.TabIndex = 9;
             this.ButtonDeleteJenis.Text = "Delete";
             this.ButtonDeleteJenis.UseVisualStyleBackColor = true;
+            this.ButtonDeleteJenis.Click += new System.EventHandler(this.ButtonDeleteJenis_Click);
             // 
             // BTN_EditJenis
             // 
-            this.BTN_EditJenis.Location = new System.Drawing.Point(231, 108);
+            this.BTN_EditJenis.Location = new System.Drawing.Point(345, 107);
             this.BTN_EditJenis.Name = "BTN_EditJenis";
-            this.BTN_EditJenis.Size = new System.Drawing.Size(75, 23);
+            this.BTN_EditJenis.Size = new System.Drawing.Size(75, 24);
             this.BTN_EditJenis.TabIndex = 10;
             this.BTN_EditJenis.Text = "Edit";
             this.BTN_EditJenis.UseVisualStyleBackColor = true;
+            this.BTN_EditJenis.Click += new System.EventHandler(this.BTN_EditJenis_Click);
+            // 
+            // DGV_jenis
+            // 
+            this.DGV_jenis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_jenis.Location = new System.Drawing.Point(132, 168);
+            this.DGV_jenis.Name = "DGV_jenis";
+            this.DGV_jenis.Size = new System.Drawing.Size(249, 119);
+            this.DGV_jenis.TabIndex = 12;
+            this.DGV_jenis.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_jenis_CellMouseClick);
+            // 
+            // BTN_Ubah
+            // 
+            this.BTN_Ubah.Location = new System.Drawing.Point(345, 138);
+            this.BTN_Ubah.Name = "BTN_Ubah";
+            this.BTN_Ubah.Size = new System.Drawing.Size(75, 24);
+            this.BTN_Ubah.TabIndex = 13;
+            this.BTN_Ubah.Text = "Ubah";
+            this.BTN_Ubah.UseVisualStyleBackColor = true;
+            this.BTN_Ubah.Click += new System.EventHandler(this.BTN_Ubah_Click);
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.Location = new System.Drawing.Point(18, 85);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(108, 19);
+            label1.TabIndex = 14;
+            label1.Text = "Nama Jenis";
             // 
             // Jenis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(541, 339);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(449, 309);
+            this.Controls.Add(label1);
+            this.Controls.Add(this.BTN_Ubah);
+            this.Controls.Add(this.DGV_jenis);
             this.Controls.Add(this.BTN_EditJenis);
             this.Controls.Add(this.ButtonDeleteJenis);
             this.Controls.Add(this.ButtonSimpanJenis);
             this.Controls.Add(this.ButtonTambahJenis);
-            this.Controls.Add(this.tb_jenisDataGridView);
             this.Controls.Add(kode_jenisLabel);
             this.Controls.Add(this.TB_kode);
-            this.Controls.Add(nama_jenisLabel);
             this.Controls.Add(this.TB_jenis);
             this.Controls.Add(this.tb_jenisBindingNavigator);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Jenis";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Jenis";
+            this.Activated += new System.EventHandler(this.Jenis_Activated);
             this.Load += new System.EventHandler(this.Jenis_Load);
             ((System.ComponentModel.ISupportInitialize)(this.db_penjualanDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_jenisBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_jenisBindingNavigator)).EndInit();
             this.tb_jenisBindingNavigator.ResumeLayout(false);
             this.tb_jenisBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tb_jenisDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_jenis)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -364,12 +366,11 @@
         private System.Windows.Forms.ToolStripButton tb_jenisBindingNavigatorSaveItem;
         private System.Windows.Forms.TextBox TB_kode;
         private System.Windows.Forms.TextBox TB_jenis;
-        private System.Windows.Forms.DataGridView tb_jenisDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.Button ButtonTambahJenis;
         private System.Windows.Forms.Button ButtonSimpanJenis;
         private System.Windows.Forms.Button ButtonDeleteJenis;
         private System.Windows.Forms.Button BTN_EditJenis;
+        private System.Windows.Forms.DataGridView DGV_jenis;
+        private System.Windows.Forms.Button BTN_Ubah;
     }
 }
